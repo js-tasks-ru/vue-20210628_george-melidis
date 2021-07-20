@@ -5,14 +5,14 @@ import { createApp } from './vendor/vue.esm-browser.js';
 const Counter = {
   data() {
     return {
-      count: 0
-    }
+      count: 0,
+    };
   },
   methods: {
-      increment () {
-    	this.count += 1;
+    increment() {
+      this.count += 1;
     },
-  }
-}
+  },
+};
 
-createApp(Counter).mount('#app')
+createApp(Counter).mount('#app');
