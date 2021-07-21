@@ -35,22 +35,21 @@ const CheckList = {
     return {
       searchQuery: null,
       EmailList: emails,
-      markedClass: ''
-    }
+      markedClass: '',
+    };
   },
   computed: {
-    resultQuery(){
-      if(this.searchQuery){
-      return this.EmailList.filter((email)=>{
-        return this.searchQuery.toLowerCase().split(' ').every(v => email.toLowerCase().includes(v))
-      })
-      }else{
-        return this.EmailList;
-      }
-    }
-  }
-}
-
-
+    resultQuery() {
+      const updList = this.EmailList.map((email) => {
+        return {
+          text: email,
+          markedClass: email.indexOf(this.searchQuery) != -1 && this.searchQuery ? 'marked' : '',
+        };
+      });
+      return updList;
+    },
+  },
+};
 
 createApp(CheckList).mount('#app');
+ 
