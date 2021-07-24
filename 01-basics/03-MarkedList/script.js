@@ -52,4 +52,3 @@ const CheckList = {
 };
 
 createApp(CheckList).mount('#app');
- 
