@@ -7,18 +7,17 @@ export default defineComponent({
   props: {
     count: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
 
   emits: ['update:count'],
-  
+
   // Шаблон лучше держать максимально простым, а логику выносить в методы
   methods: {
     increaseCount() {
-      
-      this.$emit('update:count', this.count + 1)
-    }
+      this.$emit('update:count', this.count + 1);
+    },
   },
   // Шаблон потребуется отредактировать
   template: `<button 

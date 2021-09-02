@@ -8,7 +8,7 @@ export default defineComponent({
     },
     image: {
       type: String,
-    }
+    },
   },
   computed: {
     selectImage() {
